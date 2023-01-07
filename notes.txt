@@ -1,0 +1,24 @@
+URL de l'API : https://www.themealdb.com/api/json/v1/1/search.php?s=beef 
+(attention on est en mode "search" avec ce lien)
+
+Aller chercher les données avec Axios
+
+Stocker ces données dans le state avec useState
+
+Afficher ces données avec un .map()
+
+Mettre cette logique dans un composant Card.json
+
+BONUS
+Faire une barre de recherche
+
+----------------------------
+
+Pages :
+Il va falloir une page Home -> Home.js
+
+Composants :
+Il y aura un titre -> Title.js
+          une barre de recherche -> Search.js
+          les recettes -> Card.js
+          
