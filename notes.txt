@@ -18,7 +18,7 @@ Pages :
 Il va falloir une page Home -> Home.js
 
 Composants :
-Il y aura un titre -> Title.js ? (pas besoin je pense)
-          une barre de recherche -> Search.js
+Il y aura un titre -> Title.js
+          une barre de recherche -> SearchBar.js
           les recettes -> Card.js
           
