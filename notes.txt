@@ -26,3 +26,6 @@ Il y aura un titre -> Title.js
 Idées : 
   - N°1 : Sur la card, ajouter un bouton pour dérouler les infos sur la recette (ingrédients et instructions pour la préparation du plat)
   - N°2 : Créer/Générer une page unique à chaque card lorsque qu'on clique sur cette dernière. Sur cette page on affichera toutes les infos de la recettes (ingrédients, instructions, iframe YT et la source)
+
+RD non fonctionnelle :
+  - il faut récupérer les données de la recette de quelque part --> API ? Recipies.jsx ? Card.jsx ?
