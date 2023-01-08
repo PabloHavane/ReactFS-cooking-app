@@ -1,7 +1,7 @@
-import React from 'react';
-import Recipes from '../components/Recipes';
-import SearchBar from '../components/SearchBar';
-import Title from '../components/Title';
+import React from "react";
+import Recipes from "../components/Recipes";
+import SearchBar from "../components/SearchBar";
+import Title from "../components/Title";
 
 const Home = () => {
   return (
