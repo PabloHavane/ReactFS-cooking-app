@@ -29,3 +29,7 @@ Idées :
 
 RD non fonctionnelle :
   - il faut récupérer les données de la recette de quelque part --> API ? Recipies.jsx ? Card.jsx ?
+
+Solutions possibles :
+  - Re-récuperer les données sur RD avec Axios
+ 

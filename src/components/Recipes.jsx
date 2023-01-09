@@ -11,7 +11,7 @@ const Recipes = () => {
     axios
       .get("https://www.themealdb.com/api/json/v1/1/search.php?s=beef")
       .then((res) => setData(res.data.meals));
-  });
+  }, []);
 
   return (
     <div className="recipes">

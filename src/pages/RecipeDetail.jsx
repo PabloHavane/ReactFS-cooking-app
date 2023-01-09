@@ -1,33 +1,32 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import CardDetail from "../components/CardDetail";
+import SearchBar from "../components/SearchBar";
+import Title from "../components/Title";
 
 const RecipeDetail = () => {
-  // Notre state de recipe que l'on retrouve aussi dans <Card />
-  const [recipe, setRecipe] = useState("");
   // Id de notre page
   const { recipeId } = useParams();
+  // Variable pour stocker la data de l'API
+  const [data, setData] = useState([]);
 
-  const fetchRecipeById = async (recipeId) => {
-    // Effectuez une requête HTTP pour récupérer les informations sur le produit à partir de l'identifiant de produit
-    const response = await fetch(`/recipe/${recipeId}`);
-    const recipe2 = await response;
-    console.log(recipe2);
-    return recipe2;
-  };
-
+  // Récupere la data depuis l'API et la stocke dans la variable data
   useEffect(() => {
-    const fetchRecipe = async () => {
-      const recipe3 = await fetchRecipeById(recipeId);
-      console.log(recipe3)
-      setRecipe(recipe3);
-    };
-    fetchRecipe();
-  }, [recipeId]);
+    axios
+      .get("https://www.themealdb.com/api/json/v1/1/search.php?s=beef")
+      .then((res) => setData(res.data.meals));
+  }, []);
 
   return (
     <div>
-      {console.log(recipe)}
-      <h1>Test 1 2 1 2</h1>
+      <Title />
+      <SearchBar />
+      {data.map((recipe, index) =>
+        recipe.idMeal === recipeId ? (
+          <CardDetail recipe={recipe} key={index} />
+        ) : null
+      )}
     </div>
   );
 };
