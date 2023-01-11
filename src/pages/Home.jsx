@@ -9,7 +9,7 @@ const Home = () => {
   const [data, setData] = useState([]);
   // Variables pour la recherche de recettes
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  // const [searchResults, setSearchResults] = useState([]);
 
   // Récupere la data depuis l'API et la stocke dans la variable data
   useEffect(() => {
@@ -32,13 +32,16 @@ const Home = () => {
   return (
     <div>
       <Title />
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={searchTerm} onChange={handleChange} />
-        <button type="submit">Search</button>
-      </form>
-      <Recipes recipe={data} />
+      <div className="home-content">
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={searchTerm} onChange={handleChange} />
+          <button type="submit">Search</button>
+        </form>
+        <Recipes recipe={data} />
+      </div>
+
       <div style={{ display: "none" }}>
-        <RecipeDetail />
+        <RecipeDetail className="recipe-detail" />
       </div>
     </div>
   );
