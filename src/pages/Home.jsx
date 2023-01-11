@@ -8,7 +8,7 @@ const Home = () => {
   // Variable pour stocker la data de l'API
   const [data, setData] = useState([]);
   // Variables pour la recherche de recettes
-  const [searchTerm, setSearchTerm] = useState("beef");
+  const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   // Récupere la data depuis l'API et la stocke dans la variable data
