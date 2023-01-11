@@ -8,11 +8,10 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* Route dynamique qui, en fonction de l'id d'une recette, renvoit une page <RecipeDetail /> avec  toutes les infos sur la recette */}
         <Route path="/recipe/:recipeId" element={<RecipeDetail />} />
         {/* path="*" fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
         <Route path="*" element={<Home />} />
-
-        {/* A FAIRE : Créer une route dynamique qui, en fonction de l'id d'une recette, renvoit une page <RecipeDetail /> avec  toutes les infos sur la recette */}
       </Routes>
     </BrowserRouter>
   );

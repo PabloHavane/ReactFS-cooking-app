@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const CardDetail = ({ recipe }) => {
-  const youtube = recipe.strYoutube;
 
   return (
     <div>
@@ -21,16 +20,6 @@ const CardDetail = ({ recipe }) => {
       </ul>
       <h3>Recipe</h3>
       <p>{recipe.strInstructions}</p>
-      <h3>The recipe in video</h3>
-      <iframe
-        width="1400"
-        height="545"
-        src={youtube}
-        title={recipe.strMeal + " cooking video"}
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
       <NavLink to="/">
         <button>Retour à l'accueil</button>
       </NavLink>
