@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Recipes from "../components/Recipes";
 import Title from "../components/Title";
-import RecipeDetail from "./RecipeDetail";
 
 const Home = () => {
   // Variable pour stocker la data de l'API
@@ -38,10 +37,6 @@ const Home = () => {
           <button type="submit">Search</button>
         </form>
         <Recipes recipe={data} />
-      </div>
-
-      <div style={{ display: "none" }}>
-        <RecipeDetail className="recipe-detail" />
       </div>
     </div>
   );
