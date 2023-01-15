@@ -8,9 +8,6 @@ const Card = ({ recipe }) => {
       <h3>{recipe.strMeal}</h3>
       <h4>{recipe.strArea}</h4>
       <img src={recipe.strMealThumb} alt={"Plat de " + recipe.strMeal} />
-      <button onClick={() => setIsHide(!isHide)}>
-        {isHide === false ? "Voir moins" : "Voir plus"}
-      </button>
       <div className={isHide === false ? "show" : "hide"}>
         <h3>Ingredients</h3>
         <ul>
@@ -25,6 +22,9 @@ const Card = ({ recipe }) => {
         <h3>Recipe</h3>
         <p>{recipe.strInstructions}</p>
       </div>
+      <button onClick={() => setIsHide(!isHide)}>
+        {isHide === false ? "Voir moins" : "Voir plus"}
+      </button>
     </li>
   );
 };

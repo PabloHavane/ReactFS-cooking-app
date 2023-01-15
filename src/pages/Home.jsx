@@ -31,13 +31,11 @@ const Home = () => {
   return (
     <div>
       <Title />
-      <div className="home-content">
-        <form onSubmit={handleSubmit}>
-          <input type="text" value={searchTerm} onChange={handleChange} />
-          <button type="submit">Search</button>
-        </form>
-        <Recipes recipe={data} />
-      </div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={searchTerm} onChange={handleChange} />
+        <button type="submit">Search</button>
+      </form>
+      <Recipes recipe={data} />
     </div>
   );
 };
