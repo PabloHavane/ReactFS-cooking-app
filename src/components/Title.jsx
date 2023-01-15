@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const Title = () => {
   return (
-    <div className='title'>
+    <div className="title">
       <h1>Les recettes d'Ilan</h1>
     </div>
   );
