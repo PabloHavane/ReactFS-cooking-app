@@ -1,5 +1,9 @@
-.recipes{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.ul-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.ul-grid-item{
+  width: 100%;
 }
